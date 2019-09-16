@@ -20,6 +20,7 @@ const StarWarsCard = (props) => {
                     </Col>
                 </Row>
             </Container>
+            
         </>
         )
 };
