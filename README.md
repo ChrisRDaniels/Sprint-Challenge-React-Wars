@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a way to structure your content with components in order for easier readability and to produce DRY code with compartmentalization and an easy to read syntax.
+
 - [ ] What does it mean to _think_ in react?
+
+I think it means you need to visualize your layout/structure before starting and create components to fit that vision/structure.
 
 - [ ] Describe state.
 
+State is used to describe the data that we are fetching as well as allowing it to interact with the DOM and display where and when as needed.
+
 - [ ] Describe props.
 
+Props are stand ins for the data that we are gathering, they are an easy parameter to pass around between components as well.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A side effect is anything that affects something outside the scope of a function that is being executed. This can be synced by placing an empty [] outside of our axios .get and using .then in conjunction to only allow the data do be fetched when we call it. Without the empty [] it would be called repeatedly causing potential request timeouts to an API, as well as loss of control of when to display the fetched data.
 
 ## Project Set Up
 
