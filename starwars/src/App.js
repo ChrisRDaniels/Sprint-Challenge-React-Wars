@@ -30,7 +30,7 @@ const App = () => {
     <Container>
     <CardTitle style={{ fontWeight: "bold", textAlign: "center", fontSize: "3rem", textShadow: "8px 5px 10px black", color: "white"}}>React Wars</CardTitle>
       <Card>
-        <CardBody style={{ backgroundColor: "#000000", border: "5px solid darkred"}}>
+        <CardBody style={{ backgroundColor: "#000000", backgroundImage: url"/s" border: "5px solid darkred"}}>
         {people.map((person, index) => {
           return(
             <StarWarsCard key={index} name={person.name} gender={person.gender} height={person.height} hair_color={person.hair_color} mass={person.mass} url={person.url} />
