@@ -42,7 +42,7 @@ Props are stand ins for the data that we are gathering, they are an easy paramet
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
 
-A side effect is anything that affects something outside the scope of a function that is being executed. This can be synced by placing an empty [] outside of our axios .get and using .then in conjunction to only allow the data do be fetched when we call it. Without the empty [] it would be called infinitely causing potential request timeouts to an API as well as loss of control of when to display the fetched data.
+A side effect is anything that affects something outside the scope of a function that is being executed. This can be synced by placing an empty [] outside of our axios .get and using .then in conjunction to only allow the data do be fetched when we call it. Without the empty [] it would be called repeatedly causing potential request timeouts to an API, as well as loss of control of when to display the fetched data.
 
 ## Project Set Up
 
