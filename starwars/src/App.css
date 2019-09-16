@@ -5,4 +5,14 @@
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+}
+
+p {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+}
 /* write your parent styles in here for your App.js */
