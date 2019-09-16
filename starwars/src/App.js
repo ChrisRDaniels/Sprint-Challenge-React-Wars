@@ -1,6 +1,8 @@
 import React, {useState, useEffect}from 'react';
 import './App.css';
 import axios from 'axios';
+import StarWarsCard from "./components/StarWarsCard";
+import {Card, CardBody, CardTitle, Container } from "reactstrap";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -15,8 +17,8 @@ const App = () => {
     axios
     .get(`https://swapi.co/api/people/?format=json`)
     .then(response => {
-      const starwarschar = response.data.results;
-      setPeople(starwarschar);
+      const starWarsChar = response.data.results;
+      setPeople(starWarsChar);
     })
     .catch(error => {
       console.log('unable to return data', error);
@@ -25,9 +27,18 @@ const App = () => {
 
 
   return (
-    <div className="App">
-      <h1 className="Header">React Wars</h1>
-    </div>
+    <Container>
+    <CardTitle style={{ fontWeight: "bold", textAlign: "center", fontSize: "3rem", textShadow: "8px 5px 10px black", color: "white"}}>React Wars</CardTitle>
+      <Card>
+        <CardBody style={{ backgroundColor: "#9EF54133", border: "5px solid #5EAE09"}}>
+        {people.map((person, index) => {
+          return(
+            <StarWarsCard key={index} name={person.name} gender={person.gender} height={person.height} hair_color={person.hair_color} mass={person.mass} url={person.url} />
+          )
+        })}
+        </CardBody>
+    </Card>
+    </Container>
   );
 }
 
